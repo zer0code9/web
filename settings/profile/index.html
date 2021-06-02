@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/acf35067e0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./../../../../look/weby-js.js"></script>
+    <link rel="stylesheet" href="./../../../../look/weby-style.css" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Profile | Weby</title>
+</head>
+<body>
+    <nav id="nav">
+        <div id="navItems">
+          <div id="app-nav">
+            <img id="app-logo">
+          </div> 
+          <div id="tab-nav">
+            <a id="sideButton" class="fa fa-bars mobtab" onclick="openNav()"></a>
+            <a id="homeButton" class="tab comtab">SETTINGS</a>
+            <a id="appButton" class="tab comtab">APPS</a>
+          </div>
+          <div id="account-nav"></div>
+        </div>
+    </nav>
+    <mobile-nav class="mobtab">
+      <div id="side" class="side">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a class="tab">SETTINGS</a>
+      <a class="tab">APPS</a>
+      </div>
+  </mobile-nav>
+    
+      <div id="home" class="tabCon">
+        <div class="welcome">
+          <div id="helloUser"></div>
+        </div>
+        <div id="dataContent">
+          <div id="content-area">
+            <div id="content">
+              <div class="" style="border-bottom: solid 1px black;padding: 10px;">Settings</div>
+              <div class="cont current"><a>Profile</a></div>
+              <div class="cont"><a href="../account">Account</a></div>
+              <div class="cont last"><a href="../security">Security</a></div>
+            </div>
+          </div>
+          <div id="meData-area">
+            <strong id="titleData">Profile</strong><hr>
+            <div id="meData">
+              <div class="setting-area">
+                <strong>Display Name</strong>
+                <input type="text" id="meDName">
+                <div class="h6">Your display name is the name that others will see you as. If left empty, your username will be your display name</div>
+              </div>
+              <div class="setting-area">
+                <strong>Email</strong>
+                <div id="meEmail"></div>
+              </div>
+              <div class="setting-area">
+                <strong>URL / link</strong>
+                <input type="text" id="meURL" style="width: 100%;">
+              </div>
+              <div class="setting-area">
+                <strong>Bussiness</strong>
+                <input type="text" id="meCompany">
+                <div class="h6">Let others know who you work for!</div>
+              </div>
+              <div>
+                <button id="saveProfile" onclick="saveProfile()">Save Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <footer>
+  </footer>
+  <!--Firebase & Firestore-->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script src="./../../../../firestore/firebase.js"></script>
+  <!--Filepond-->
+  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+  <script src="./../../../../firestore/filepond.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

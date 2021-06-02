@@ -1,0 +1,76 @@
+/*Settings*/
+.h6 {font-size: small;}
+#settings {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+#dataContent {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+}
+#content-area {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: solid 1px black;
+    width: 10%;
+    height: 10%;
+}
+
+#content>.cont {
+    border-bottom: solid 1px black;
+    padding: 10px;
+}
+#content>.last {
+    padding: 10px;
+    border-bottom: 0;
+}
+#content>.cont:hover {opacity: 0.8;color: red;cursor: pointer;}
+#content>.current {border-left: ridge 2px red;text-align: center;}
+#content>.current:hover {opacity: unset;color: unset;cursor:default;}
+
+#meData-area {
+    margin-left: 20px;
+    width: 80%;
+}
+#titleData {font-size: 30px;}
+.setting-area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+input[type=text], input[type=date] {
+      width: 25vh;
+      padding: 7px;
+      border: 0;
+      border-radius: 100px;
+      border-bottom: solid 1px lightgray;
+      font-family: "Goldman";
+      outline: 0;
+      box-shadow: rgb(0, 0, 0, 0.6) 0 2px 15px;
+}
+input[type=button] {
+    width: 8vh;
+    padding: 7px;
+    border: 0;
+    outline: 0;
+    box-shadow: rgb(0, 0, 0, 0.6) 0 2px 15px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+#saveProfile, #saveAccount {
+    background-color: #8c8b88;
+    color: black;
+    padding: 16px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 100px;
+    font-family: "Goldman";
+    outline: 0;
+}
+#saveProfile:hover, #saveAccount:hover {
+    opacity: 0.8;
+}

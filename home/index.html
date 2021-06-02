@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/acf35067e0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./../src/script-js.js"></script>
+    <link rel="stylesheet" href="./../src/style-css.css" />
+    <title>Weby</title>
+</head>
+<body>
+    <nav id="nav">
+        <div id="navItems">
+          <div id="app-nav">
+            <img id="app-logo">
+            <span id="app-name">Weby</span>
+          </div> 
+          <div id="tab-nav">
+            <a id="sideButton" class="fa fa-bars mobtab" onclick="openNav()"></a>
+            <a id="homeButton" class="tab comtab" onclick="openTab('home')">HOME</a>
+            <a id="webyButton" class="tab comtab" onclick="openTab('weby')">WEBY</a>
+          </div>
+          <div id="account-nav"></div>
+        </div>
+    </nav>
+    <mobile-nav class="mobtab">
+      <div id="side" class="side">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a class="tab" onclick="openTab('home')">HOME</a>
+      <a class="tab" onclick="openTab('weby')">WEBY</a>
+      </div>
+  </mobile-nav>
+    
+      <div id="home" class="tabCon">
+        <div class="welcome">
+          <div>Weby</div>
+        </div>
+        <div id="header"></div>
+      </div>
+  <footer>
+    <div id="footer">
+      <div class="footerItems">
+          <h2>Other apps</h2>
+          <a>Weby</a>
+          <a>Moby</a>
+          <a>Crash</a>
+      </div>
+      <div class="footerItems">
+          <h2>Company</h2>
+          <a>About Weby</a>
+          <a>Wither</a>
+      </div>
+  </div>
+  <div id="about">
+      <span>Created & Powered by Weby</span>
+      <span>&copy; Weby, Inc.</span>
+  </div>
+  </footer>
+<!--Firebase & Firestore-->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="./../../firestore/firebase.js"></script>
+<!--Filepond-->
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"></script>
+<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"></script>
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+<script src="./../../firestore/filepond.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>

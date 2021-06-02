@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0px;
+    width: 100vw;
+    
+    color: black; 
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  button {
+    outline: 0;
+  }
+  #nav {
+    background: white;
+    color: black;
+    width: 100vw;
+    padding: 10px 0 10px 0;
+    box-shadow: rgb(0, 0, 0, 0.6) 0 2px 15px;
+    position: absolute;
+    top: 0;
+}
+  #navItems {
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    padding: 10px;
+  }
+  #app-nav {
+    font-size: 50px;
+  }
+  #tab-nav {
+    font-size: 40px;
+    display: flex;
+    min-width: 400px;
+    padding-left: 10px;
+    transition: 0.5s;
+  }
+  .mobtab {display: none;}
+  #account-nav {
+    font-size: 50px;
+    position: absolute;
+    right: 1px;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  #profilePicture {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10000000px;
+    border: solid 1px gray;
+    box-shadow: rgb(0, 0, 0, 0.6) 0 5px 15px;
+    transition: all 0.15s ease-out;
+  }
+  #profilePicture:hover {
+    width: 80px;
+    height: 80px;
+  }
+  /*Tabs*/
+  .tab:hover, .side a:hover {
+    color: red;
+    cursor: pointer;
+  }
+  .side a, .tab {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  #tab-nav>.current {
+  color: darkred;
+  }
+
+  /*Mobile Tabs*/
+  .side {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .side .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  @media screen and (max-height: 450px) {
+    .side {padding-top: 15px;}
+    .side a {font-size: 18px;}
+  }
+  /*
+  .input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+*/
+  .welcome {
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+/*Footer*/
+  #footer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 30px 0;
+    margin-top: 15px;
+    width: 100%;
+    box-shadow: rgb(0, 0, 0, 0.6) 0 4px 15px;
+  }
+  .footerItems {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  #footer2 {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 10px 0 10px 0;
+  }
+  .supportBtn {
+    border: solid 1px palevioletred;
+    background: pink;
+  }
+  .subscribeBtn {
+    border: solid 1px darkred;
+    background: red;
+  }
+  .footerBtn {
+    padding: 13px;
+    border-radius: 70px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+  }
+  #about {
+    background-color: whitesmoke;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media all and (max-width: 800px) {
+    .comtab {display: none;}
+    .mobtab {display: block;}
+    .nav {font-size: 30px;}
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+  -webkit-text-fill-color: red;
+  }
+  #loading-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #loading {
+    position:fixed;
+    top: 45%;
+    font-size: 100px;
+    z-index: 100;
+  }
