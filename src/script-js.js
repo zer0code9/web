@@ -29,14 +29,16 @@ function openNav() {
   <div id="footer">
         <div class="footerItems">
             <h2>Other apps</h2>
-            <a>Weby</a>
-            <a>Moby</a>
-            <a>Crash</a>
+            <a>Slash ./</a>
+            <a>Dash .-</a>
+            <a>Crash .#</a>
         </div>
         <div class="footerItems">
             <h2>Company</h2>
-            <a>About Weby</a>
-            <a>Wither</a>
+            <a>About Slash</a>
+            <a>About Dash</a>
+            <a>About Crash</a>
+            <a>Splashy</a>
         </div>
     </div>
     <div id="footer2">
