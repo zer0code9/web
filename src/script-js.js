@@ -30,8 +30,8 @@ function openNav() {
         <div class="footerItems">
             <h2>Other apps</h2>
             <a>Slash ./</a>
-            <a>Dash .-</a>
-            <a>Crash .#</a>
+            <a>Dash .|</a>
+            <a>Crash .\\</a>
         </div>
         <div class="footerItems">
             <h2>Company</h2>
@@ -42,8 +42,8 @@ function openNav() {
         </div>
     </div>
     <div id="footer2">
-        <div class="supportBtn footerBtn" onclick="supportWeby()"><span>Support</span><i class="far fa-heart"></i></div>
-        <div class="subscribeBtn footerBtn" onclick="subscribeWeby()"><span>Subscribe</span><i class="far fa-thumbs-up"></i></div>
+        <div class="supportBtn footerBtn" onclick="supportSlash()"><span>Support</span><i class="far fa-heart"></i></div>
+        <div class="subscribeBtn footerBtn" onclick="subscribeSlash()"><span>Subscribe</span><i class="far fa-thumbs-up"></i></div>
     </div>
     <div id="about">
         <span>Created & Powered by Weby</span>

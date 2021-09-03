@@ -1,11 +1,11 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyBcaNWYhsVXe2UQEN29a2jo9kQ9-nHItLw",
-    authDomain: "webyus-world.firebaseapp.com",
-    projectId: "webyus-world",
-    storageBucket: "webyus-world.appspot.com",
-    messagingSenderId: "361296989622",
-    appId: "1:361296989622:web:e8cd6770260641e66a0517",
-    measurementId: "G-L8KF3GJKS8"
+  apiKey: "AIzaSyCvNfXHq0g3ETXeHPOs5V6MkNyiWfUu1-c",
+  authDomain: "slashdevus.firebaseapp.com",
+  projectId: "slashdevus",
+  storageBucket: "slashdevus.appspot.com",
+  messagingSenderId: "724081280496",
+  appId: "1:724081280496:web:601b30f1e963f40c2a0935",
+  measurementId: "G-FW7RNJTMYB"
     };
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
@@ -99,6 +99,8 @@ var firebaseConfig = {
               document.getElementById('account-nav').innerHTML = `<img src="" id="profilePicture" class="ok" width=150><button onclick="signOutEmail()">Sign out</button>`
               document.getElementById("profilePicture")
                 .setAttribute("src", "data:image/png;base64," + userData.profilePicture)
+
+            
           }) 
         } else {
           document.getElementById('account-nav').innerHTML = `<a class="fa fa-sign-in" id="signin" href="https://account-6ick.pages.dev/signin"></a>`
@@ -107,23 +109,23 @@ var firebaseConfig = {
       })
       var user = auth.currentUser;
   
-  function supportWeby() {
+  function supportSlash() {
     auth.onAuthStateChanged(function(user) {
       if (user) {
         firestore.collection("users").doc(user.uid).set({
           supporter: true,
         }, {merge: true})
-        .then(console.log("Thanks for supporting Weby!"))
+        .then(console.log("Thanks for supporting Slash!"))
       }
     })
   }
-  function subscribeWeby() {
+  function subscribeSlash() {
     auth.onAuthStateChanged(function(user) {
       if (user) {
         firestore.collection("users").doc(user.uid).set({
           subscriber: true,
         }, {merge: true})
-        .then(console.log("Thanks for subscribing to Weby!"))
+        .then(console.log("Thanks for subscribing to Slash!"))
       }
     })
   }
