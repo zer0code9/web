@@ -1,5 +1,5 @@
 "use strict";
-window.onload() =
+window.onload =
   `
   <script type="module">
     // Import the functions you need from the SDKs you need
