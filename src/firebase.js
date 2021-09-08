@@ -1,43 +1,5 @@
 "use strict";
-document.body.appendChild =
-  `
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-analytics.js";
-    import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js';
-  
-    const firebaseConfig = {
-      apiKey: "AIzaSyCvNfXHq0g3ETXeHPOs5V6MkNyiWfUu1-c",
-      authDomain: "slashdevus.firebaseapp.com",
-      projectId: "slashdevus",
-      storageBucket: "slashdevus.appspot.com",
-      messagingSenderId: "724081280496",
-      appId: "1:724081280496:web:601b30f1e963f40c2a0935",
-      measurementId: "G-FW7RNJTMYB"
-    };
-  
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const firestore = getFirestore(app);
-  </script>
-  `
 
-/*var firebaseConfig = {
-    apiKey: "AIzaSyCvNfXHq0g3ETXeHPOs5V6MkNyiWfUu1-c",
-    authDomain: "slashdevus.firebaseapp.com",
-    projectId: "slashdevus",
-    storageBucket: "slashdevus.appspot.com",
-    messagingSenderId: "724081280496",
-    appId: "1:724081280496:web:601b30f1e963f40c2a0935",
-    measurementId: "G-FW7RNJTMYB"
-    };
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    */
-  
-    const auth = app.auth();
-    const firestore = app.firestore();
     function signUp() {
       //const = document.getElementById('').value;
       const username = document.getElementById('username').value;
@@ -115,6 +77,7 @@ document.body.appendChild =
         log.innerHTML = error.message;
       });
     }
+
     auth.onAuthStateChanged(function(user) {
       document.getElementById('account-nav').innerHTML = `<div id="load-area"><i class="fas fa-spinner fa-spin" id="load"></i></div>`
       if (user) {
