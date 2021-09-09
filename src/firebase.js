@@ -85,7 +85,7 @@ const auth = firebase.auth();
             
           }) 
         } else {
-          document.getElementById('account-nav').innerHTML = `<a class="fa fa-sign-in" id="signin" href="https://account-6ick.pages.dev/signin"></a>`
+          document.getElementById('account-nav').innerHTML = `<a class="fa fa-sign-in" id="signin" href="https://slashaccount.vercel.app/signin"></a>`
           document.getElementById('loading-area').innerHTML = `<i class="fas fa-exclamation-triangle" id="loading"></i>`
         }
       })
