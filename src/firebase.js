@@ -1,12 +1,12 @@
 "use strict";
 var firebaseConfig = {
-  apiKey: "AIzaSyBGvqi58VSBKKjUGManuevv4LBG5RhLnBw",
-  authDomain: "projectweby.firebaseapp.com",
-  projectId: "projectweby",
-  storageBucket: "projectweby.appspot.com",
-  messagingSenderId: "387567243351",
-  appId: "1:387567243351:web:d76e736f1da59905201312",
-  measurementId: "G-D675SNP3Y8"
+  apiKey: "AIzaSyCvNfXHq0g3ETXeHPOs5V6MkNyiWfUu1-c",
+  authDomain: "slashdevus.firebaseapp.com",
+  projectId: "slashdevus",
+  storageBucket: "slashdevus.appspot.com",
+  messagingSenderId: "724081280496",
+  appId: "1:724081280496:web:601b30f1e963f40c2a0935",
+  measurementId: "G-FW7RNJTMYB"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
