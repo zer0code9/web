@@ -1,25 +1,18 @@
 "use strict";
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAdditionalUserInfo, getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
-import { getModularInstance } from "@firebase/util";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCvNfXHq0g3ETXeHPOs5V6MkNyiWfUu1-c",
-  authDomain: "slashdevus.firebaseapp.com",
-  projectId: "slashdevus",
-  storageBucket: "slashdevus.appspot.com",
-  messagingSenderId: "724081280496",
-  appId: "1:724081280496:web:601b30f1e963f40c2a0935",
-  measurementId: "G-FW7RNJTMYB"
+var firebaseConfig = {
+  apiKey: "AIzaSyBGvqi58VSBKKjUGManuevv4LBG5RhLnBw",
+  authDomain: "projectweby.firebaseapp.com",
+  projectId: "projectweby",
+  storageBucket: "projectweby.appspot.com",
+  messagingSenderId: "387567243351",
+  appId: "1:387567243351:web:d76e736f1da59905201312",
+  measurementId: "G-D675SNP3Y8"
 };
-
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-const firestore = getFirestore();
-const analytics = getAnalytics(app);
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+const firestore = firebase.firestore();
+const auth = firebase.auth();
 
     function signUp() {
       //const = document.getElementById('').value;
@@ -30,22 +23,19 @@ const analytics = getAnalytics(app);
       const firstName = document.getElementById('firstName').value;
       const lastName = document.getElementById('lastName').value;
       const log = document.getElementById('log');
-      signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-          const user = userCredential.user;
-          try {
-            const docRef = await addDoc(collection(firestore, "users"), {
+      auth.createUserWithEmailAndPassword(email, password)
+      .then(() => {
+          let user = auth.currentUser;
+          firestore.collection("users").doc(user.uid).collection('settings').doc('account').set({
               username: username,
               password: password,
               birthdate: birthdate,
               email: email,
               firstName: firstName,
               lastName: lastName,
-            });
-            console.log("Document written with ID: ", docRef.id);
-          } catch (e) {
-            console.error("Error adding document: ", e);
-          }
+          }, {merge: true})
+          .then(console.log(log.innerHTML = "Success! Welcome to Slash!"))
+          .catch(function (error) {log.innerHTML = error.message;})
         })
         .catch(function (error) {log.innerHTML = error.message;})
     }
@@ -54,9 +44,9 @@ const analytics = getAnalytics(app);
     const password = document.getElementById('password').value;
     const email = document.getElementById('email').value;
     const log = document.getElementById('log');
-    signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
+    auth.createUserWithEmailAndPassword(email, password)
+    .then(() => {
+      let user = auth.currentUser;
       firestore.collection("users").doc(user.uid).collection('settings').doc('account').get()
       .then(data => {
         const userData = data.data()
