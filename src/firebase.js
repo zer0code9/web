@@ -111,4 +111,3 @@ const auth = firebase.auth();
       }
     })
   }
-module.exports = signIn, signUp, signOutEmail, subscribeSlash, supportSlash;
