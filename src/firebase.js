@@ -44,7 +44,7 @@ const auth = firebase.auth();
     const password = document.getElementById('password').value;
     const email = document.getElementById('email').value;
     const log = document.getElementById('log');
-    auth.createUserWithEmailAndPassword(email, password)
+    auth.signInWithEmailAndPassword(email, password)
     .then(() => {
       let user = auth.currentUser;
       firestore.collection("users").doc(user.uid).collection('settings').doc('account').get()
