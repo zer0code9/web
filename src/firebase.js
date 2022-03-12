@@ -53,7 +53,7 @@ const auth = firebase.auth();
         if (username == userData.username) {
           log.innerHTML = "Success!"
         } else {
-          app.auth().signOut()
+          firebase.auth().signOut()
           log.innerHTML = "Wrong Username"
         }
       })
@@ -63,9 +63,9 @@ const auth = firebase.auth();
 
   document.body.innerHTML += `<div id="loading-area"><i class="fas fa-spinner fa-spin" id="loading"></i></div>`
     // Sign Out
-    function signOutEmail() {
+    function signOut() {
       firebase.auth().signOut().then(() => {
-        document.getElementById('account-nav').innerHTML = `<a class="fa fa-sign-in" id="signin" href="https://account-6ick.pages.dev/signin"></a>`
+        document.getElementById('account-nav').innerHTML = `<a class="fa fa-sign-in" id="signin" href="https://slashaccount.vercel.app/signin"></a>`
       }).catch((error) => {
         log.innerHTML = error.message;
       });
@@ -78,7 +78,7 @@ const auth = firebase.auth();
           .then(data => {
             $('#loading').hide();
             const userData = data.data()
-              document.getElementById('account-nav').innerHTML = `<img src="" id="profilePicture" class="ok" width=150><button onclick="signOutEmail()">Sign out</button>`
+              document.getElementById('account-nav').innerHTML = `<img src="" id="profilePicture" class="ok" width=150><button onclick="signOut()">Sign out</button>`
               document.getElementById("profilePicture")
                 .setAttribute("src", "data:image/png;base64," + userData.profilePicture)
 
