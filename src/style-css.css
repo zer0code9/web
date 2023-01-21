@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: rgb(29, 29, 34);
     margin: 0px;
     width: 100vw;
     
-    color: black; 
+    color: white; 
   }
   a {
     color: inherit;
@@ -16,22 +16,20 @@ body {
     outline: 0;
   }
   #nav {
-    background: white;
-    color: black;
+    background: rgb(24, 23, 23);
+    color: white;
     width: 100vw;
     padding: 10px 0 10px 0;
-    box-shadow: rgb(0, 0, 0, 0.6) 0 2px 15px;
     position: absolute;
     top: 0;
 }
   #navItems {
     display: flex;
     align-items: center;
-    font-size: 50px;
     padding: 10px;
   }
   #app-nav {
-    font-size: 50px;
+    font-size: 30px;
   }
   #tab-nav {
     font-size: 40px;
@@ -124,44 +122,41 @@ body {
   }
 /*Footer*/
   #footer {
-    background-color: white;
+    background-color: rgb(24, 23, 23);
+    color: white;
     display: flex;
     justify-content: center;
     padding: 30px 0 30px 0;
     margin-top: 15px;
     width: 100%;
-    box-shadow: rgb(0, 0, 0, 0.6) 0 4px 15px;
+    box-shadow: rgb(0, 0, 0, 0.6) 0 1px 3px;
   }
   .footerItems {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align:start;
     padding: 10px;
+    font-size: 15px;
+  }
+  .footerItems > a {
+    padding: 5px;
+  }
+  .footerItems > a:hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
   }
   #footer2 {
-    background-color: white;
+    background-color: rgb(24, 23, 23);
+    color: white;
     display: flex;
     justify-content: space-around;
     width: 100vw;
     padding: 10px 0 10px 0;
   }
-  .supportBtn {
-    border: solid 1px palevioletred;
-    background: pink;
-  }
-  .subscribeBtn {
-    border: solid 1px darkred;
-    background: red;
-  }
-  .footerBtn {
-    padding: 13px;
-    border-radius: 70px;
-    font-size: 15px;
-    display: flex;
-    justify-content: space-around;
-  }
   #about {
-    background-color: whitesmoke;
+    background-color: black;
+    color: white;
     padding: 20px;
     display: flex;
     flex-direction: row;
